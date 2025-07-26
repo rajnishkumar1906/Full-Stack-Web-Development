@@ -1,0 +1,251 @@
+@import "tailwindcss";
+
+/* ========== Global Reset & Base ========== */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #494a48;
+  color: blue;
+}
+
+/* ========== Navbar Styling ========== */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f4f4f4;
+}
+
+#navbar > div {
+  display: flex;
+  gap: 1rem;
+}
+
+#navbar h4 {
+  margin: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ========== Main Layout Container ========== */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ========== Footer ========== */
+#footer-cont {
+  background-color: #cfc4b7;
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: blue;
+}
+
+/* ========== Form Section ========== */
+#form-cont {
+  flex-grow: 1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to bottom right, rgb(217, 255, 0), #ea2503);
+}
+
+input[type="text"],
+input[type="email"] {
+  border: 2px solid #080808;
+  margin: 20px;
+  padding: 20px;
+  font-size: 20px;
+  color: black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#submit {
+  border: solid rgb(255, 146, 5);
+  font-size: 20px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 30px;
+  color: white;
+  background-color: rgb(255, 146, 5);
+  transition: transform 0.2s ease;
+}
+
+#submit:hover {
+  border: solid rgba(255, 123, 0, 0.693);
+  background-color: rgb(255, 106, 0);
+  transform: scale(1.2);
+}
+
+/* ========== Picture Scroll Section ========== */
+#wonders {
+  color: rgb(22, 13, 13);
+  text-align: center;
+  font-size: 28px;
+  margin-top: 10px;
+  padding: 0px;
+}
+
+.image-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  padding: 50px;
+}
+
+.image-scroll-container img {
+  flex: 0 0 auto;
+  height: 200px;
+  width: 300px;
+  border-radius: 8px;
+}
+
+.image-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========== Students Section ========== */
+h3 {
+  background-color: cadetblue;
+  text-align: center;
+  color: rgb(49, 38, 30);
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+#student {
+  background: cadetblue;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+}
+
+#student::-webkit-scrollbar {
+  display: none;
+}
+
+.student-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background: linear-gradient(to bottom right, rgb(217, 255, 0), #0dc75a);
+  min-width: 300px;
+  color: #000;
+  align-items: center;
+  justify-content: center;
+}
+
+.student-card > p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.student-card .add-btn {
+  border: solid green;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: green;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease;
+}
+
+.student-card .add-btn:hover {
+  background-color: rgb(4, 111, 4);
+  border-color: rgb(4, 111, 4);
+  transform: scale(1.05);
+}
+
+/* ========== API Data Section (Images with Author) ========== */
+.getData {
+  width: 200px;
+  height: 50px;
+  color: rgba(245, 247, 245, 0.956);
+  background-color: rgb(3, 236, 11);
+  border-radius: 5px;
+  border: solid rgb(3, 236, 11);
+  margin: 50px auto;
+  display: block;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.getData:hover {
+  transform: scale(1.08);
+}
+
+.data {
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  border: solid 3px rgb(3, 236, 11);
+  background-color: rgba(133, 133, 137, 0.556);
+  border-radius: 10px;
+}
+
+/* Each image block with text */
+.element {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  gap: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Image inside .element (on left) */
+.element img {
+  height: 100px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Text block (on right) */
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 600px) {
+  .element {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .element img {
+    width: 100%;
+    height: auto;
+  }
+}
