@@ -48,7 +48,6 @@ const App = () => {
     <div className="app-container">
       <Navbar />
 
-      {/* ✅ Keep only the component form */}
       <Form />
 
       <Picture />
